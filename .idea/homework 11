@@ -1,0 +1,8 @@
+x = int(input("x="))
+n = int(input("n="))
+s = ""
+for x in s:
+   if n > 0:
+    s= x ** n
+
+print(s)
