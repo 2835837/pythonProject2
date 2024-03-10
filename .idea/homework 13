@@ -1,0 +1,31 @@
+# quadratic equation
+print("I can solve a*x**2 + b*x + c = 0 for you! ")
+# check
+while True:
+    try:
+        a = float(input(" Please give me the 'a' coefficient:",))
+        b = float(input(" Please give me the 'b' coefficient:", ))
+        c = float(input(" Please give me the 'c' coefficient:", ))
+        if a > 0 or a < 0:
+            if b**2-4*a*c > 0 or b**2-4*a*c == 0:
+                print("Thank you, that is a valid input :) OKAY I'LL SOLVE IT NOW.")
+                # calculate roots
+                if b ** 2 - 4 * a * c > 0:
+                    root1 = (-b + (b ** 2 - 4 * a * c) ** 1 / 2) / 2 * a
+                    root2 = (-b - (b ** 2 - 4 * a * c) ** 1 / 2) / 2 * a
+                    print("Root 1:", root1)
+                    print("Root 2:", root2)
+                    break
+                else:
+                    root = (-b) / (2 * a)
+                    print("Root:", root)
+                    break
+            else:
+                print("Sorry, but that quadratic does not have real roots.")
+        else:
+            print("Sorry, but 'a' cannot be zero.")
+    except:
+        print("That is not a real number! ")
+
+# END
+quit()
