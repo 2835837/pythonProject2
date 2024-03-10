@@ -1,0 +1,43 @@
+# write the function
+def f(x):
+    return(-x**2+3*x-2)
+
+print("###f(x) = -x**2 + 3*x -2 from a = 1 to b = 2 ###")
+
+# print the values
+x = 1
+while x <= 2.01:
+    y = f(x)
+    print("when x =",x,"=>f(x)=",y)
+    x += 0.1
+
+# print variables
+first = f(1)
+last = f(2)
+print("###Example of Trapezium Rule Value###")
+print("First Height:",first)
+print("Last Height:", last)
+
+# calculate and print middle sum
+x = 1.10
+middlesum = 0
+while x <= 2.01:
+    y = f(x)
+    middlesum += y
+    x += 0.1
+print("Middle Sum:", middlesum)
+
+# calculate and print approximately and true integration and error
+
+h = 0.1
+isa = h/2*(first + last +2*middlesum)
+true = 1/6
+Error = (true-isa)/true*100
+
+print("Integration is approximately", isa)
+print("True value of integration is 1/6")
+print("Therefore the error is ", Error, "%")
+
+
+# END
+quit()
